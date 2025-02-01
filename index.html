@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поймай арбуз</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-wrapper">
+        <div class="menu-container" id="menu-container">
+            <h1>Поймай арбуз</h1>
+            <button id="start-button">Начать игру</button>
+            <button id="open-skins-menu">Выбрать скин</button>
+        </div>
+         <div class="skins-menu" id="skins-menu" style="display: none;">
+            <div class="skins-slider-container">
+                <div class="skins-slider" id="skins-slider">
+                    <!-- Скины будут добавлены через JavaScript -->
+                </div>
+            </div>
+           <button class="skins-menu-btn prev-skin" id="prev-skin-btn">
+                <img src="left_arrow.png" alt="Prev" >
+            </button>
+            <button class="skins-menu-btn next-skin" id="next-skin-btn">
+                <img src="right_arrow.png" alt="Next">
+            </button>
+           <button class="skins-menu-btn close-skins" id="close-skins-btn">
+                <img src="close.png" alt="Close">
+            </button>
+        </div>
+        <div class="game-container" id="game-container" style="display:none;">
+            <div class="wolf" id="wolf"></div>
+            <div class="egg-container" id="egg-container"></div>
+            <div class="score" id="score">Счёт: 0</div>
+            <div class="lives" id="lives">Жизни: 3</div>
+        </div>
+        <div class="controls">
+            <input type="range" min="0" max="100" value="50" class="wolf-slider" id="wolf-slider">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
